@@ -4,3 +4,29 @@ main {
     justify-content: flex-start;
     align-items: center;
 }
+
+#pcpp-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+#pcpp-btn:hover #pcpp-img {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+#hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 40px;
+    line-height: 313px;
+    text-align: center;
+    color: white;
+    visibility: hidden;
+}
+
+#pcpp-btn:hover #hover-text {
+    visibility: visible;
+}
