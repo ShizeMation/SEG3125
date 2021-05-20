@@ -1,12 +1,27 @@
 main {
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
     align-items: center;
+}
+
+h3 {
+    text-decoration: underline;
 }
 
 #pcpp-btn {
     position: relative;
+    width: 90%;
+    max-width: fit-content;
+    height: fit-content;
+}
+
+#pcpp-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     overflow: hidden;
 }
 
@@ -17,11 +32,14 @@ main {
 
 #hover-text {
     position: absolute;
+    width: fit-content;
+    height: fit-content;
     top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    font-size: 40px;
-    line-height: 313px;
+    right: 0;
+    margin: auto;
+    font-size: 30px;
     text-align: center;
     color: white;
     visibility: hidden;
@@ -29,4 +47,50 @@ main {
 
 #pcpp-btn:hover #hover-text {
     visibility: visible;
+}
+
+#survey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#survey label::after {
+    content: "\a";
+    white-space: pre;
+}
+
+#question-2 {
+    width: 50%;
+    min-width: min-content;
+}
+
+#question-2 label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+    margin: 4px;
+}
+
+#question-2 label:hover {
+    background-color: lightgray;
+}
+
+#question-2 label::after {
+    position: absolute;
+}
+
+#submit-btn {
+    width: 15%;
+    height: 3em;
+    margin: 20px;
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+
+#submit-btn:hover {
+    color: white;
+    background-color: green;
 }
