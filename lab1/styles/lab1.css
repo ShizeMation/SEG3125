@@ -103,6 +103,7 @@ h3 {
     margin: 20px;
     background-color: lightgreen;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #submit-btn:hover {
