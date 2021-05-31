@@ -1,0 +1,36 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Client {
+    display: block;
+}
+
+#Client label::after {
+    content: "\a";
+    white-space: pre;
+}
+
+#displayProduct {
+    line-height: 2.5em;
+}
+
+#displayProduct label {
+    cursor: pointer;
+}
+
+#displayProduct label::after {
+    content: "\a";
+    white-space: pre;
+}
+
+#addCart {
+    margin-top: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
