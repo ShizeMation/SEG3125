@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEG3125 Lab 3</title>
+    <link href="styles/lab3.css" rel="stylesheet" type="text/css">
+    <script src="scripts/groceries.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>S-Mart, your local independent grocer!</h1>
+    </header>
+    <main>
+        <div id="left-section">
+            <div id="profile">
+                <h3>My Profile</h3>
+                <div>Choose your preferences:</div>
+                <label><input type="checkbox" id="lactose-free">Lactose free</label>
+                <label><input type="checkbox" id="nut-free">Nut free</label>
+                <label><input type="checkbox" id="organic">Organic</label>
+            </div>
+            <div id="products">
+                <h3>Products for You</h3>
+                <p>We selected items according to your preferences.</p>
+                <div>Choose items to buy:</div>
+                <div id="displayProduct"></div>
+                <button id="addCart-btn" type="button">
+                    Update Cart
+                </button>
+            </div>
+        </div>
+        <div id="cart">
+            <h3>Cart</h3>
+            <p>Here are items you have selected.</p>
+            <div id="displayCart"></div>
+        </div>
+    </main>
+    <footer>
+        Website designed by Shize Li @ uOttawa
+    </footer>
+</body>
+</html>
