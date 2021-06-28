@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - Health clinic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+</head>
+<body>
+    <div class="container text-center bg-primary text-light" style="padding-top: 10px; padding-bottom: 10px;">
+        <h1>S-Mart Pet Care</h1>
+        40 Country Road, Gresnvor, Josville E4B 9R5
+    </div>
+    <div class="container bg-secondary" style="margin-top: 2px; margin-bottom: 20px;">
+        <div class="row">
+            <div class="col">
+                <a href="#services-section" class="text-center text-light" style="display: block; text-decoration: none; height: 100%;">
+                    <i class="bi bi-file-earmark-medical"></i> Services
+                </a>
+            </div>
+            <div class="col" style="border-left-color: rgb(163, 163, 163); border-left-width: 2px; border-left-style: solid;">
+                <a href="#appointment-section" class="text-center text-light" style="display: block; text-decoration: none; height: 100%;">
+                    <i class="bi bi-calendar3"></i> Make Appointment
+                </a>
+            </div>
+            <div class="col" style="border-left-color: rgb(163, 163, 163); border-left-width: 2px; border-left-style: solid;">
+                <a href="#staff-section" class="text-center text-light" style="display: block; text-decoration: none; height: 100%;">
+                    <i class="bi bi-person-badge"></i> Experts
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="services-section" class="container">
+        <div class="card text-center bg-light text-dark" style="padding-bottom: 10px;">
+            <div class="row">
+                <div class="col">
+                    <h4><i class="bi bi-file-earmark-medical"></i> Our Services</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Emergencies - $50
+                </div>
+                <div class="col">
+                    Checkups - $30
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Surgeries - $200
+                </div>
+                <div class="col">
+                    Dentistry - $120
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Vaccinations - $20
+                </div>
+                <div class="col">
+                    Medications - $40
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="appointment-section" class="container" style="margin-top: 20px;">
+        <div class="card bg-light text-dark" style="padding: 15px;">
+            <h4 style="width: fit-content; margin-left: auto; margin-right: auto;">
+                <i class="bi bi-calendar3"></i> Make an Appointment
+            </h4>
+            <div class="text-danger" style="width: fit-content; margin-left: auto; margin-right: auto;">
+                If it's an emergency, please come to our location <strong>immediately</strong>. We are open 24/7 for emergency services.
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#creditCardForm" style="margin-top: 15px; width: fit-content; margin-left: auto; margin-right: auto;">
+                Open Appointment Form
+            </button>
+            <div class="modal fade" id="creditCardForm" role="dialog" aria-labelledby="appt-label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form onsubmit="alert('Your appointment request has been sent!\nWe will send you a confirmation via e-mail.');">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="appt-label">Make an Appointment</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>
+                                        Select a service:
+                                        <select class="form-select" required>
+                                            <option>Checkup</option>
+                                            <option>Surgery</option>
+                                            <option>Dentistry</option>
+                                            <option>Vaccination</option>
+                                            <option>Medication</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="form-group" style="margin-top: 10px;">
+                                    <label>
+                                        Select who you wish to have an appointment with:
+                                        <select class="form-select" required>
+                                            <option>We choose a specialist best for you.</option>
+                                            <option>Dr. Helen Pak</option>
+                                            <option>Dr. Sook Kang</option>
+                                            <option>Dr. Steven Wo</option>
+                                            <option>Dr. Petra Ji</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="form-group" style="margin-top: 10px;">
+                                    <label>
+                                        Select a date:
+                                        <input class="form-control" type="date" required>
+                                    </label>
+                                </div>
+                                <div class="form-group" style="margin-top: 10px;">
+                                    <label>
+                                        Select a time:
+                                        <input class="form-control" type="time" required>
+                                    </label>
+                                </div>
+                                <div class="form-group" style="margin-top: 10px;">
+                                    <label>
+                                        <i class="bi bi-person-circle"></i> Full name:
+                                        <input class="form-control" type="text" required>
+                                    </label>
+                                </div>
+                                <div class="form-group" style="margin-top: 10px;">
+                                    <label>
+                                        <i class="bi bi-envelope"></i> E-mail address:
+                                        <input class="form-control" type="email" required>
+                                    </label>
+                                </div>
+                                <div class="form-group" style="margin-top: 10px;">
+                                    <label>
+                                        <i class="bi bi-telephone"></i> Phone number:
+                                        <input class="form-control" type="tel" pattern="^[0-9]{10}$" required>
+                                        <span class="text-secondary">Only 10 numbers. No spaces or other characters.</span>
+                                    </label>
+                                </div>
+                                <div class="form-group" style="margin-top: 10px;">
+                                    <label>
+                                        <i class="bi bi-credit-card"></i> Credit card number:
+                                        <input class="form-control" type="text" pattern="^[0-9]{16}$" required>
+                                        <span class="text-secondary">Only 16 numbers. No spaces or other characters.</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Make Appointment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="staff-section" class="container text-center bg-primary text-light" style="margin-top: 20px;">
+        <h2 style="line-height: 50px;"><i class="bi bi-person-badge"></i> Our Expert Staff</h2>
+    </div>
+    <div class="container" style="padding-top: 10px; padding-bottom: 20px;">
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="card" style="margin: 10px;">
+                <!-- Image taken from https://pngtree.com/freepng/hospital-medical-doctor-character-material_4486142.html -->
+                <img class="card-img-top" src="images/helen.jpg" alt="helen.jpg">
+                <div class="card-body">
+                    <h4 class="card-title">Dr. Helen Pak</h4>
+                    <p class="card-text">Surgeon</p>
+                </div>
+            </div>
+            <div class="card" style="margin: 10px;">
+                <!-- Image taken from https://www.pngitem.com/middle/TRihwhi_book-doctor-clipart-vector-library-library-doctor-free/ -->
+                <img class="card-img-top" src="images/we-sook.png" alt="we-sook.png">
+                <div class="card-body">
+                    <h4 class="card-title">Dr. Sook Kang</h4>
+                    <p class="card-text">Dental Specialist</p>
+                </div>
+            </div>
+            <div class="card" style="margin: 10px;">
+                <img class="card-img-top" src="images/we-sook.png" alt="we-sook.png">
+                <div class="card-body">
+                    <h4 class="card-title">Dr. Steven Wo</h4>
+                    <p class="card-text">Assistant Surgeon</p>
+                </div>
+            </div>
+            <div class="card" style="margin: 10px;">
+                <img class="card-img-top" src="images/we-sook.png" alt="we-sook.png">
+                <div class="card-body">
+                    <h4 class="card-title">Dr. Teddy Hitch</h4>
+                    <p class="card-text">Nutrition Specialist</p>
+                </div>
+            </div>
+            <div class="card" style="margin: 10px;">
+                <img class="card-img-top" src="images/helen.jpg" alt="helen.jpg">
+                <div class="card-body">
+                    <h4 class="card-title">Dr. Petra Ji</h4>
+                    <p class="card-text">Medication Specialist</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
